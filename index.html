@@ -19,7 +19,7 @@
             <div class="header_inner">
                <a class="navbar-brand" href="javascript:;"><img src="images/logo.png" alt="" /></a>
                <div class="right_blk">
-                  <nav class="cstm_navbar">
+                  <nav class="cstm_navbar desktop_view">
                      <ul>
                         <li><a href="javascript:;">Storage Units Near You </a>
                            <div class="cstm_multi_dropdown">
@@ -196,6 +196,57 @@
                         </li>
                         <li><a href="javascript:;">Storage Blog</a></li>
 
+                     </ul>
+                  </nav>
+                  <nav class="cstm_navbar mobile_navbar" id="accordionExample">
+                     <ul>
+                        <li id="headingOne">
+                           <a href="javascript:;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Storage Units Near You </a>
+                              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                 <div class="card-body">
+                                       <ul>
+                                          <li><a href="javascript:;">Self Storage</a></li>
+                                          <li><a href="javascript:;">Climate Controlled Storage</a></li>
+                                          <li><a href="javascript:;">Drive-up Access Storage</a></li>
+                                       </ul>
+                                 </div>
+                              </div>
+                        </li>
+                        <li id="headingTwo">
+                           <a href="javascript:;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Vehicle Storage</a>
+                           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                              <div class="card-body">
+                                 <ul>
+                                    <li><a href="javascript:;">Car Storage</a></li>
+                                    <li><a href="javascript:;">Boat Storage</a></li>
+                                    <li><a href="javascript:;">RV Storage</a></li>
+                                 </ul>
+                              </div>
+                            </div>
+                        </li>
+                        <li id="headingThree">
+                           <a href="javascript:;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Storage Size Guide</a>
+                           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                              <div class="card-body">
+                                 <ul>
+                                    <li><a href="javascript:;">3’ x 3‘ - Locker</a></li>
+                                    <li><a href="javascript:;">5’ x 5’ - Small</a></li>
+                                    <li><a href="javascript:;">5’ x 10’ - Small</a></li>
+                                    <li><a href="javascript:;">5’ x 15’ - Medium</a></li>
+                                    <li><a href="javascript:;">10’ x 10’ - Medium</a></li>
+                                    <li><a href="javascript:;">10’ x 15’ - Large</a></li>
+                                    <li><a href="javascript:;">10’ x 20’ - Large</a></li>
+                                    <li><a href="javascript:;">10’ x 25’ - Large</a></li>
+
+                                 </ul>
+                              </div>
+                            </div>
+                        </li>
+                        <li class="no_drodpwon">
+                           <a href="javascript:;">Storage Blog</a>
+                           
+                        </li>
                      </ul>
                   </nav>
                   <div class="mob_show">
@@ -622,15 +673,17 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script>
          $('.cstm_navbar').on('click', 'li a', function() {
-            $('.cstm_navbar li.active').removeClass('active');
+            $('.cstm_navbar > li.active').removeClass('active');
             $(this).parent().addClass('active').siblings().removeClass('active');
 
          }); 
 
          $(".menu_btn").click(function(){
             $(this).toggleClass("active");
+            $(".main-header").toggleClass("active");
+            $("body").toggleClass("active");
             $(".cstm_navbar").toggleClass("active");
-            $(".cstm_navbar li ").removeClass("active");
+            $(".cstm_navbar > li ").removeClass("active");
          })
 
          $(".back_btn").on('click', function(){
@@ -638,7 +691,7 @@
          })
 
          $('.storage_guide_dropdown').on('click', 'li a', function() {
-            $('..storage_guide_dropdown li.active').removeClass('active');
+            $('.storage_guide_dropdown li.active').removeClass('active');
             $(this).parent().addClass('active').siblings().removeClass('active');
 
          }); 

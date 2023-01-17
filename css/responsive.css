@@ -103,22 +103,58 @@
     .cstm_navbar > ul li:after{
         display: none;
     }
-    .cstm_navbar > ul li:before{
+    .cstm_navbar > ul li a:before{
         position: absolute;
         content: "";
         background: url("../images/ic_arrow.svg") no-repeat;
         width: 9px;
         height: 16px;
-        right:25px;
+        right:40px;
         top:50%;
         transform: translateY(-50%);
         background-size: 8px;
+    }
+    .cstm_navbar > ul li a{
+        position: relative;
     }
     .cstm_navbar.active{
         opacity: 1;
         visibility: visible;
         transition: 0.2s ease-in-out;
         left: 0;
+    }
+    .cstm_navbar > ul li.active li{
+        border: none;
+    }
+    .cstm_navbar > ul li a[aria-expanded="true"]{
+        font-size: 16px;
+    }
+    .cstm_navbar > ul li.active li a{
+        color: #000;
+        background: #fff;
+        border: none;
+        font-weight: normal;
+        font-size: 16px;
+        padding: 4px 10px 4px 40px;
+    }
+    .cstm_navbar > ul li a[aria-expanded="true"]:before{
+        background: url("../images/ic_arrow_white.svg") no-repeat;
+        width:16px;
+        height: 11px;
+    }
+    .cstm_navbar > ul li.no_drodpwon a:before{
+        display: none;
+    }
+    .cstm_navbar > ul li.active li a:before{
+        background: none;
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        height: 1px;
+        width: 6px;
+        background: #000;
+        
     }
     .cstm_navbar > ul{
         flex-direction: column;
@@ -195,7 +231,7 @@
         padding: 12px 52px 12px 16px;
         display: flex;
     }
-    .cstm_navbar > ul li.active a{
+    .cstm_navbar > ul li a[aria-expanded="true"]{
             background: #feb100;
             color: #fff;
             font-weight: 600;
@@ -237,6 +273,24 @@
     .ftr-link-list.pop-str-cites li {
         width: 48%;
         display: inline-flex;
+    }
+
+    .desktop_view{
+        display: none;
+    }
+    .mobile_navbar{
+        display: block;
+    }
+
+    .main-header.active{
+        background: #fff;
+    }
+
+    .cstm_navbar{
+        top: 60px;
+    }
+    .menu_btn.active span{
+        background: #000;
     }
 }
 

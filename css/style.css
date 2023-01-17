@@ -643,3 +643,10 @@ width:100%;
 .back_btn{
     display: none;
 }
+
+.mobile_navbar{
+    display: none;
+}
+body.active{
+    overflow: hidden;
+}
