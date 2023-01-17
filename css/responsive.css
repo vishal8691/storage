@@ -126,10 +126,14 @@
     .cstm_navbar > ul li.active li{
         border: none;
     }
+    .cstm_navbar > ul li li{
+        border: none;
+    }
     .cstm_navbar > ul li a[aria-expanded="true"]{
         font-size: 16px;
     }
-    .cstm_navbar > ul li.active li a{
+    .cstm_navbar > ul li.active li a,
+    .cstm_navbar > ul li li a{
         color: #000;
         background: #fff;
         border: none;
@@ -145,7 +149,8 @@
     .cstm_navbar > ul li.no_drodpwon a:before{
         display: none;
     }
-    .cstm_navbar > ul li.active li a:before{
+    .cstm_navbar > ul li.active li a:before,
+    .cstm_navbar > ul li li a:before{
         background: none;
         left: 24px;
         top: 50%;
