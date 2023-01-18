@@ -613,7 +613,7 @@ width:100%;
     position: relative;
 }
 .menu_btn span{
-    width:100%;
+    width:28px;
     height:2px;
     background: #fff;
     border-radius: 2px;
@@ -649,4 +649,15 @@ width:100%;
 }
 body.active{
     overflow: hidden;
+}
+
+.header_inner .navbar-brand {
+	padding: 0px;
+	max-width: 230px;
+	font-size: 30px;
+	color: #fff;
+	font-weight: normal;
+}
+.header_inner .navbar-brand img{
+    width: 100%;
 }
